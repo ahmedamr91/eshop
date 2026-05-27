@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AmrStore | Premium Company Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="brand"><span>Amr</span>Store</a>
+    <nav class="nav" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="actions">
+      <button id="themeToggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      <a href="cart.html" class="cart-link"><i class="fa-solid fa-bag-shopping"></i><span id="cartCount">0</span></a>
+      <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">New Corporate Collection</span>
+      <h1>Premium products for modern companies.</h1>
+      <p>Launch your company ecommerce presence with a fast, elegant, and GitHub Pages-ready storefront.</p>
+      <div class="hero-buttons">
+        <a href="products.html" class="btn primary">Shop Products</a>
+        <a href="about.html" class="btn secondary">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Business technology products" />
+      <div class="floating-card">
+        <strong>Fast Static Store</strong>
+        <span>No backend required for MVP</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div><strong>40+</strong><span>Products</span></div>
+    <div><strong>24/7</strong><span>Online Catalog</span></div>
+    <div><strong>100%</strong><span>Responsive</span></div>
+    <div><strong>Free</strong><span>GitHub Hosting</span></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span>Categories</span>
+      <h2>Shop by department</h2>
+    </div>
+    <div class="category-grid">
+      <a class="category-card" href="products.html?category=tech"><i class="fa-solid fa-laptop"></i><h3>Technology</h3><p>Smart devices and accessories.</p></a>
+      <a class="category-card" href="products.html?category=office"><i class="fa-solid fa-briefcase"></i><h3>Office</h3><p>Professional workplace essentials.</p></a>
+      <a class="category-card" href="products.html?category=fashion"><i class="fa-solid fa-shirt"></i><h3>Fashion</h3><p>Modern branded apparel.</p></a>
+      <a class="category-card" href="products.html?category=home"><i class="fa-solid fa-couch"></i><h3>Home</h3><p>Comfort and lifestyle products.</p></a>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="section-head light">
+      <span>Featured</span>
+      <h2>Popular products</h2>
+    </div>
+    <div id="featuredProducts" class="product-grid"></div>
+  </section>
+
+  <section class="section split-section">
+    <div>
+      <span class="badge">Company Ready</span>
+      <h2>Built for brand trust and conversion.</h2>
+      <p>This template includes clean product cards, cart persistence, wishlist, filtering, search, mobile navigation, dark mode, and professional business sections.</p>
+      <a href="products.html" class="btn primary">View Catalog</a>
+    </div>
+    <div class="features-list">
+      <div><i class="fa-solid fa-shield-halved"></i><span>Secure static frontend</span></div>
+      <div><i class="fa-solid fa-mobile-screen"></i><span>Mobile first design</span></div>
+      <div><i class="fa-solid fa-cart-shopping"></i><span>LocalStorage cart</span></div>
+      <div><i class="fa-solid fa-credit-card"></i><span>Payment link ready</span></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <a href="index.html" class="brand"><span>Amr</span>Store</a>
+      <p>Premium static ecommerce website for modern companies.</p>
+    </div>
+    <div>
+      <h4>Links</h4>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>sales@example.com</p>
+      <p>+1 555 0100</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
