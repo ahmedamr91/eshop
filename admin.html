@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <title>Admin Panel | AmrStore</title>
+</head>
+<body>
+  <header class="topbar">
+  <a href="index.html" class="brand"><span>Amr</span>Store</a>
+
+  <nav class="nav" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="admin.html" class="active" id="adminNavLink" class="admin-nav-link hidden">Admin</a>
+  </nav>
+
+  <div class="actions">
+    <button id="themeToggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <a href="cart.html" class="cart-link" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i><span id="cartCount">0</span></a>
+    <a href="login.html" id="loginLink" class="login-pill">Login</a>
+    <button id="logoutBtnGlobal" class="login-pill hidden">Logout</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+  <section class="page-hero">
+    <span class="badge">Private Admin</span>
+    <h1>Admin Panel</h1>
+    <p>This page is restricted to approved admin emails only.</p>
+  </section>
+
+  <section class="admin-layout">
+    <div id="adminDenied" class="admin-card hidden">
+      <h2>Access Required</h2>
+      <p>You must login with an approved admin account to manage products.</p>
+      <a href="login.html?redirect=admin" class="btn primary">Login as Admin</a>
+    </div>
+
+    <div id="adminBox" class="admin-grid hidden">
+      <form id="productForm" class="admin-card">
+        <h2 id="formTitle">Add Product</h2>
+        <input type="hidden" id="productId" />
+
+        <label>Product Name</label>
+        <input id="name" type="text" required placeholder="Premium Laptop" />
+
+        <label>Description</label>
+        <textarea id="description" required placeholder="Short product description"></textarea>
+
+        <label>Price</label>
+        <input id="price" type="number" step="0.01" required placeholder="99" />
+
+        <label>Category</label>
+        <select id="category">
+          <option value="tech">Tech</option>
+          <option value="office">Office</option>
+          <option value="fashion">Fashion</option>
+          <option value="home">Home</option>
+        </select>
+
+        <label>Image URL</label>
+        <input id="image_url" type="url" required placeholder="https://..." />
+
+        <label>Stock</label>
+        <input id="stock" type="number" required value="10" />
+
+        <label class="check-row">
+          <input id="featured" type="checkbox" />
+          Featured product
+        </label>
+
+        <button class="btn primary full" type="submit">Save Product</button>
+        <button class="btn secondary full" type="button" id="resetFormBtn">Reset Form</button>
+        <p id="adminMessage" class="form-message"></p>
+      </form>
+
+      <div class="admin-card">
+        <h2>Products</h2>
+        <div id="adminProducts" class="admin-products"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div>
+    <a href="index.html" class="brand"><span>Amr</span>Store</a>
+    <p>Premium ecommerce storefront powered by GitHub Pages and Supabase.</p>
+  </div>
+  <div>
+    <h4>Pages</h4>
+    <a href="products.html">Products</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html">Login</a>
+  </div>
+  <div>
+    <h4>Contact</h4>
+    <p>sales@example.com</p>
+    <p>+1 555 0100</p>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

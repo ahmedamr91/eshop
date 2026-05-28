@@ -2,30 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <title>Products | AmrStore</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 <body>
   <header class="topbar">
-    <a href="index.html" class="brand"><span>Amr</span>Store</a>
-    <nav class="nav" id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="actions">
-      <button id="themeToggle"><i class="fa-solid fa-moon"></i></button>
-      <a href="cart.html" class="cart-link"><i class="fa-solid fa-bag-shopping"></i><span id="cartCount">0</span></a>
-      <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
-    </div>
-  </header>
+  <a href="index.html" class="brand"><span>Amr</span>Store</a>
 
+  <nav class="nav" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="admin.html" id="adminNavLink" class="admin-nav-link hidden">Admin</a>
+  </nav>
+
+  <div class="actions">
+    <button id="themeToggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <a href="cart.html" class="cart-link" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i><span id="cartCount">0</span></a>
+    <a href="login.html" id="loginLink" class="login-pill">Login</a>
+    <button id="logoutBtnGlobal" class="login-pill hidden">Logout</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
   <section class="page-hero">
+    <span class="badge">Dynamic Catalog</span>
     <h1>Product Catalog</h1>
-    <p>Search, filter, sort, add to cart, and save favorites.</p>
+    <p>Browse live products from Supabase with search, filters, sorting, cart, and product preview.</p>
   </section>
 
   <section class="shop-layout">
@@ -36,7 +41,7 @@
         <option value="default">Sort by default</option>
         <option value="low">Price: low to high</option>
         <option value="high">Price: high to low</option>
-        <option value="rating">Top rated</option>
+        <option value="name">Name: A to Z</option>
       </select>
       <div class="filter-buttons">
         <button class="filter active" data-category="all">All</button>
@@ -46,26 +51,39 @@
         <button class="filter" data-category="home">Home</button>
       </div>
     </aside>
+
     <main>
-      <div id="productCount" class="product-count"></div>
+      <div id="productCount" class="product-count">Loading products...</div>
       <div id="productGrid" class="product-grid"></div>
     </main>
   </section>
 
   <div id="productModal" class="modal">
     <div class="modal-content">
-      <button id="closeModal" class="modal-close">&times;</button>
+      <button id="closeModal" class="modal-close" aria-label="Close product preview">&times;</button>
       <div id="modalBody"></div>
     </div>
   </div>
 
   <footer class="footer">
-    <div><a href="index.html" class="brand"><span>Amr</span>Store</a><p>Premium company storefront.</p></div>
-    <div><h4>Support</h4><a href="contact.html">Contact</a><a href="cart.html">Cart</a></div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="js/products.js"></script>
-  <script src="js/app.js"></script>
+  <div>
+    <a href="index.html" class="brand"><span>Amr</span>Store</a>
+    <p>Premium ecommerce storefront powered by GitHub Pages and Supabase.</p>
+  </div>
+  <div>
+    <h4>Pages</h4>
+    <a href="products.html">Products</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html">Login</a>
+  </div>
+  <div>
+    <h4>Contact</h4>
+    <p>sales@example.com</p>
+    <p>+1 555 0100</p>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

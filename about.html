@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>About | AmrStore</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></head>
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <title>About | AmrStore</title>
+</head>
 <body>
-<header class="topbar"><a href="index.html" class="brand"><span>Amr</span>Store</a><nav class="nav" id="navMenu"><a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav><div class="actions"><button id="themeToggle"><i class="fa-solid fa-moon"></i></button><a href="cart.html" class="cart-link"><i class="fa-solid fa-bag-shopping"></i><span id="cartCount">0</span></a><button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button></div></header>
-<section class="page-hero"><h1>About Our Company</h1><p>Professional ecommerce experience for modern brands.</p></section>
-<section class="section split-section"><div><span class="badge">Our Mission</span><h2>Deliver premium products with a simple, elegant buying experience.</h2><p>AmrStore is a polished static ecommerce template designed for company catalogs, MVP stores, internal merchandise, and branded product showcases.</p></div><div class="about-card"><h3>Why choose us?</h3><p>Fast loading, responsive design, easy deployment, and future-ready integration with Supabase, Firebase, Stripe, or Shopify.</p></div></section>
-<section class="section"><div class="category-grid"><div class="category-card"><i class="fa-solid fa-bolt"></i><h3>Fast</h3><p>Optimized static pages.</p></div><div class="category-card"><i class="fa-solid fa-lock"></i><h3>Secure</h3><p>No server attack surface for MVP.</p></div><div class="category-card"><i class="fa-solid fa-rocket"></i><h3>Scalable</h3><p>Ready for backend later.</p></div></div></section>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="js/products.js"></script><script src="js/app.js"></script>
-</body></html>
+  <header class="topbar">
+  <a href="index.html" class="brand"><span>Amr</span>Store</a>
+
+  <nav class="nav" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="admin.html" id="adminNavLink" class="admin-nav-link hidden">Admin</a>
+  </nav>
+
+  <div class="actions">
+    <button id="themeToggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <a href="cart.html" class="cart-link" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i><span id="cartCount">0</span></a>
+    <a href="login.html" id="loginLink" class="login-pill">Login</a>
+    <button id="logoutBtnGlobal" class="login-pill hidden">Logout</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+  <section class="page-hero">
+    <h1>About Our Company</h1>
+    <p>Professional ecommerce experience for modern brands.</p>
+  </section>
+  <section class="section split-section">
+    <div>
+      <span class="badge">Our Mission</span>
+      <h2>Deliver premium products with a simple, elegant buying experience.</h2>
+      <p>AmrStore is built for company catalogs, MVP stores, internal merchandise, and branded product showcases.</p>
+    </div>
+    <div class="about-card">
+      <h3>Why choose us?</h3>
+      <p>Fast loading, responsive design, easy deployment, and future-ready integration with Supabase, Stripe, PayPal, or Shopify.</p>
+    </div>
+  </section>
+  <footer class="footer">
+  <div>
+    <a href="index.html" class="brand"><span>Amr</span>Store</a>
+    <p>Premium ecommerce storefront powered by GitHub Pages and Supabase.</p>
+  </div>
+  <div>
+    <h4>Pages</h4>
+    <a href="products.html">Products</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html">Login</a>
+  </div>
+  <div>
+    <h4>Contact</h4>
+    <p>sales@example.com</p>
+    <p>+1 555 0100</p>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
