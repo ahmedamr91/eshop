@@ -4,7 +4,7 @@ const PAYMENT_LINK = "https://buy.stripe.com/YOUR_PAYMENT_LINK";
 const ADMIN_EMAILS = ["asharkawe91@gmail.com"];
 
 function money(value) {
-  return `$${Number(value || 0).toFixed(2)}`;
+  return `${Number(value || 0).toLocaleString("en-EG")} EGP`;
 }
 
 function getCart() {
